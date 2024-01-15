@@ -33,14 +33,19 @@ public class Transaction {
     }
     public synchronized void buy() throws InterruptedException{
         Trader trader = searchTrader(coin.getWalletAddress());
+        if(trader==null)return;
         Coin newCoin = null;
         for(Coin coinA : MarketPlace.getListOfCoins()){
             if(Objects.equals(coinA.getSymbol(), coin.getCoin()))
                 newCoin=coinA;
         }
-        while(!newCoin.buyCoins(trader, coin.getQuantity())){
+        while(newCoin!=null && !newCoin.buyCoins(trader, coin.getQuantity())){
             logger.printMessage("coins are being bought");
             wait();
+        }
+        if(newCoin==null) {
+            logger.printMessage("No such coin!!!");
+            return;
         }
         logger.printMessage("Purchase done");
         logger.printOutput(newCoin.getName()+" "+newCoin.getavailableQuantity());
@@ -48,14 +53,20 @@ public class Transaction {
     }
     public synchronized void sell() throws InterruptedException{
         Trader trader = searchTrader(coin.getWalletAddress());
+        if(trader==null)return;
         Coin newCoin = null;
         for(Coin coin1: MarketPlace.getListOfCoins()){
             if(Objects.equals(coin1.getSymbol(),coin.getCoin()))
                 newCoin = coin1;
+
         }
-        while(!newCoin.sellCoins(trader, coin.getQuantity())){
+        while(newCoin != null && !newCoin.sellCoins(trader, coin.getQuantity())){
             logger.printMessage("Selling is being executed");
             wait();
+        }
+        if(newCoin == null){
+            logger.printMessage("No such coin!!!");
+            return;
         }
         logger.printMessage("Selling done");
         logger.printOutput(newCoin.getName()+" "+newCoin.getavailableQuantity());

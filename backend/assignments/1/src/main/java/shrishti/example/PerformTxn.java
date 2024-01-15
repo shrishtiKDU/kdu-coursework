@@ -1,13 +1,20 @@
 package shrishti.example;
 
 import java.util.Objects;
+import java.util.concurrent.CountDownLatch;
+
 import shrishti.example.Logger.logger;
 public class PerformTxn implements Runnable{
 
     private Parse txn;
-    public PerformTxn(Parse txn){
+    public PerformTxn(Parse txn, CountDownLatch latch){
         this.txn = txn;
     }
+
+    public PerformTxn() {
+
+    }
+
     @Override
     public void run(){
         Transaction.Type type = null;

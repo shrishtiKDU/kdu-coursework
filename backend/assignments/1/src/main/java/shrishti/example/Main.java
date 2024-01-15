@@ -1,6 +1,8 @@
 package shrishti.example;
 import java.io.BufferedReader;
-import shrishti.example.Logger.logger;
+
+import java.nio.file.Path;
+
 import java.util.*;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
@@ -16,64 +18,75 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 public class Main {
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) {
 
-        Map<Integer, Trader> traderMap= new HashMap<Integer, Trader>();
-        BufferedReader br = new BufferedReader(new FileReader("src/main/resources/coins.csv"));
-        String line;
-        br.readLine();
-        while ((line = br.readLine()) != null) {
-            // Split the line into columns
-            String[] columns = line.split(",");
-            Coin myCoin = new Coin();
-            myCoin.setRank(Integer.parseInt(columns[1]));
-            myCoin.setSymbol(columns[3]);
-            myCoin.setPrice(Double.parseDouble(columns[4]));
-            myCoin.setCirculatingSupply(Double.parseDouble(columns[5]));
-            myCoin.setName(columns[2]);
+    }
+    public static ArrayList<String[]> parseCSV(Path path) {
+        try (BufferedReader br = new BufferedReader(new FileReader(path.toString()))) {
+            ArrayList<String[]> data = new ArrayList<>();
+
+            String line;
+            br.readLine();
+            while ((line = br.readLine()) != null) {
+                String[] columns = line.split(",");
+
+                if(columns.length == 6) {
+                    Coin c = new Coin(Integer.parseInt(columns[1]), columns[2], columns[3], Double.parseDouble(columns[4]), Long.parseLong(columns[5]));
+                    MarketPlace.getListOfCoins().add(c);
+                } else if (columns.length == 5) {
+                    Trader t = new Trader(columns[1], columns[2], columns[3], columns[4]);
+                    MarketPlace.getListOfTraders().add(t);
+                }
+
+                data.add(columns);
+            }
+            return data;
+        } catch (IOException I) {
+            System.out.println(I);
         }
 
-
-        BufferedReader txnBr = new BufferedReader(new FileReader("src/main/resources/traders.csv"));
-        String traderline;
-        txnBr.readLine();
-        while ((traderline = txnBr.readLine())!=null){
-            String[] txnColumn = traderline.split(",");
-            Trader myTrader = new Trader();
-            myTrader.setFirstName(txnColumn[1]);
-            myTrader.setLastName(txnColumn[2]);
-            myTrader.setPhone(txnColumn[3]);
-            myTrader.setWalletAddress(txnColumn[4]);
-            traderMap.put(Integer.parseInt(txnColumn[0]), myTrader);
-
-        }
-
-        String jsonFilePath = "src/main/resources/small_transaction.json";
+        return null;
+    }
+    public static JsonNode parseJsonFile(String path) {
         ObjectMapper objectMapper = new ObjectMapper();
-        CountDownLatch latch=new CountDownLatch(3);
+
         try {
-            JsonNode jsonNode;
-            jsonNode = objectMapper.readTree(new File(jsonFilePath));
-            executeTransactions(jsonNode, latch);
-            logger.printMessage("JSON content as JsonNode: \n");
+            return objectMapper.readTree(new File(path));
         } catch (IOException e) {
             e.printStackTrace();
         }
-    }
-    public static void executeTransactions(JsonNode jsonTransactions, CountDownLatch latch)
-        throws JsonProcessingException{
-            ExecutorService performService = Executors.newFixedThreadPool(10);
-            ObjectMapper objectMapper = new ObjectMapper();
-            Parse[] transactions = objectMapper.treeToValue(jsonTransactions, Parse[].class);
-            ArrayList<Parse> transactionArray = new ArrayList<>();
-            Collections.addAll(transactionArray, transactions);
-            for(Parse obj: transactionArray){
-                performService.execute(new PerformTxn(obj));
-            }
-            performService.shutdown();
 
-        }
+        return null;
     }
+
+    public static void executeTransactions(JsonNode jsonTransactions, CountDownLatch
+            latch) throws JsonProcessingException, InterruptedException {
+        ExecutorService execService = Executors.newFixedThreadPool(10);
+
+        ObjectMapper objectMapper = new ObjectMapper();
+        Parse[] transactions = objectMapper.treeToValue(jsonTransactions, Parse[].class);
+
+        ArrayList<Parse> transactionArrayList = new ArrayList<>();
+        Collections.addAll(transactionArrayList, transactions);
+
+        for(Parse obj : transactionArrayList) {
+            execService.execute(new PerformTxn(obj, latch));
+        }
+
+        latch.await();
+
+        execService.shutdown();
+    }
+}
+
+
+
+
+
+
+
+
+
 
 
 

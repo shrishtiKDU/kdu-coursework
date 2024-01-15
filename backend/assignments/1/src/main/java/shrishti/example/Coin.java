@@ -74,7 +74,7 @@ public class Coin {
     }
 
 
-    public synchronized boolean buyCoins(Trader buyer, long quantityNeeded){
+    public synchronized boolean buyCoins(Trader buyer, long quantityNeeded) throws NullPointerException{
         if(availableQuantity >= quantityNeeded){
          availableQuantity -= quantityNeeded;
          buyer.addingCoins(this, quantityNeeded);
