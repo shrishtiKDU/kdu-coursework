@@ -125,7 +125,7 @@ public class MainTest {
             new Main();
             Main.executeTransactions(transactionArray, latch);
         } catch (IOException e) {
-            // TODO Auto-generated catch block
+
             fail();
         } catch (InterruptedException e) {
             throw new RuntimeException(e);

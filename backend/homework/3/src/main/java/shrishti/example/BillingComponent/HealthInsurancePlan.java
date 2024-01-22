@@ -3,7 +3,8 @@ package shrishti.example.BillingComponent;
 public abstract class HealthInsurancePlan {
 
     private double coverage;
-    private int discount;private int monthlyPremium;
+    private int discount;
+    private int monthlyPremium;
     private InsuranceBrand offeredBy;
 
     public double getCoverage(){

@@ -39,7 +39,8 @@ public class Query {
 
         assert t != null;
         logger.printMessage("Trader " + t.getFirstNme() + " " +  t.getLastNme() + "'s Portfolio:");
-        t.getWallet().forEach((coin, quantity) ->  logger.printMessage(coin + " " + quantity));
+        t.getWallet().forEach((coin, quantity) ->  System.out.println(coin + " " + quantity));
+
     }
 
     public static void traderProfitLoss(String walletAddress) {

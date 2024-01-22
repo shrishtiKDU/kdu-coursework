@@ -9,7 +9,6 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
@@ -19,6 +18,27 @@ import java.util.concurrent.Executors;
 
 public class Main {
     public static void main(String[] args) {
+
+        try {
+            ObjectMapper mapper = new ObjectMapper();
+
+            JsonNode jsonTransactions = mapper.readTree(new File("src/main/resources/small_transaction.json"));
+            parseCSV(Path.of("src/main/resources/coins.csv"));
+            parseCSV(Path.of("src/main/resources/traders.csv"));
+            int transactionCount = jsonTransactions.size();
+            CountDownLatch latch = new CountDownLatch(transactionCount);
+            executeTransactions(jsonTransactions, latch);
+            latch.await();
+
+            Query.retrieveTopCoins(5);
+            Query.topBottomTraders();
+            Query.retrieveCoinDetails("LUNA");
+            Query.traderPortfolio("0x344427a90da861f79cc80bac2ff8638f");
+            Query.traderProfitLoss("0x344427a90da861f79cc80bac2ff8638f");
+        } catch (Exception e) {
+            Thread.currentThread().interrupt();
+        }
+
 
     }
     public static ArrayList<String[]> parseCSV(Path path) {
@@ -30,7 +50,7 @@ public class Main {
             while ((line = br.readLine()) != null) {
                 String[] columns = line.split(",");
 
-                if(columns.length == 6) {
+                if (columns.length == 6) {
                     Coin c = new Coin(Integer.parseInt(columns[1]), columns[2], columns[3], Double.parseDouble(columns[4]), Long.parseLong(columns[5]));
                     MarketPlace.getListOfCoins().add(c);
                 } else if (columns.length == 5) {
@@ -71,9 +91,8 @@ public class Main {
 
         for(Parse obj : transactionArrayList) {
             execService.execute(new PerformTxn(obj, latch));
+            latch.countDown();
         }
-
-        latch.await();
 
         execService.shutdown();
     }
