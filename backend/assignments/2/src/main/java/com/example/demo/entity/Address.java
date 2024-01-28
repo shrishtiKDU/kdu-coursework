@@ -1,4 +1,4 @@
-package com.example.assignment.entity;
+package com.example.demo.entity;
 
 
 import lombok.AllArgsConstructor;
@@ -9,5 +9,9 @@ import lombok.Data;
 @Data
 @AllArgsConstructor
 public class Address {
+
+    /**
+     * The string representation of the address.
+     */
     private String address;
 }
