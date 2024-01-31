@@ -1,0 +1,30 @@
+package com.example.jdbc.model;
+
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import java.time.Instant;
+import java.util.Date;
+import java.util.UUID;
+
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+public class User {
+
+    private UUID id;
+    private String userName;
+    private int loggedIn;
+    private String timeZone;
+    private UUID tenantId;
+    private Date createdAt;
+    private String createdBy;
+    private String updatedBy;
+    private Date updatedAt;
+
+
+    public User(String username, int loggedIn, String timeZone, String tenantId, Instant createdAt, String createdBy, String updatedBy, Instant updatedAt) {
+    }
+}
