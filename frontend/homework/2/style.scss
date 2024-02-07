@@ -1,0 +1,113 @@
+@import "./variable.scss";
+
+body {
+  background-color: black;
+}
+
+.main_section {
+  background-color: white;
+  padding-top: 32px;
+}
+
+.header {
+  background-color: white;
+  line-height: 20%;
+}
+#header_heading {
+  color: rgb(52, 51, 51);
+  font-size: 5em;
+}
+.heading_div
+{
+    line-height: 10%;
+}
+
+#header_text {
+  color: rgb(125, 125, 125);
+  font-size: xx-large;
+font-weight: 400;
+}
+
+.mid_section{
+    display: flex;
+    justify-content: space-between;
+}
+
+.mid_section_text_div{
+    line-height: 0%;
+    margin-left: 128px;
+}
+#mid_section_text{
+    color: rgb(161, 157, 157);
+    font-size: x-large;
+    font-weight: 600;
+    
+}
+.mid_section_text_div{
+    margin-top: -32px;
+}
+
+.mid_section_1{
+    display: flex;
+    margin-top: -72px;
+   
+}
+
+.mid_img{
+    height: 128px;
+    width:128px;
+    padding-top: 64px;
+    padding-right: 8px;
+}
+
+#mid_img_text{
+
+    font-size: 4rem;
+    color: rgb(93, 92, 92);
+    font-weight: 500;
+}
+
+.days_section{
+display:flex;
+justify-content: space-around;
+line-height: 1%;
+}
+
+.day_detail_first{
+display: flex;
+justify-content: space-between;
+margin-top: -12px;
+}
+.day{
+    color: rgb(87, 87, 87);
+    font-size: 24px;
+    font-weight: bold;
+}
+
+#day_img{
+    height: 92px;
+    width: 92px;
+    margin-top: -12px;
+}
+
+#temp_text{
+    font-size: x-large;
+    color: rgb(111, 111, 111);
+    font-weight: 600;
+}
+
+#humid_text{
+    font-size: x-large;
+    color: rgb(142, 142, 142);
+    font-weight: 400;
+}
+
+.pollen_text{
+    font-size: x-large;
+    color: rgb(161, 161, 161);
+    margin-top: -1px;
+    font-weight: 600;
+}
+#farenhite{
+    font-size: smaller;
+}
