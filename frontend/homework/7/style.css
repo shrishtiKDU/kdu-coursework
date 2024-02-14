@@ -1,0 +1,64 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.heading-text {
+  font-size: xx-large;
+  display: flex;
+  justify-content: center;
+  color: black;
+}
+
+.header {
+  background-color: #DFE1E6;
+}
+
+.main-box {
+  border: 2px solid gray;
+  padding: 8px;
+  width: 50%;
+  height: 50%;
+}
+
+.message {
+  display: flex;
+  justify-content: start;
+}
+
+.user-pfp {
+  background-color: orange;
+  border-radius: 50%;
+  color: white;
+  padding: 16px;
+}
+
+.my-pfp {
+  background-color: rgb(52, 37, 224);
+  border-radius: 50%;
+  color: white;
+  padding: 16px;
+}
+
+.sent-text-box {
+  border: 1px solid rgb(195, 193, 193);
+  padding: 10px;
+  border-radius: 6px;
+  margin-left: 12px;
+}
+
+#submit-btn-id {
+  height: 24px;
+  width: 24px;
+}
+
+.submit-section {
+  display: flex;
+  padding-bottom: 15px;
+}
+
+#text-area {
+  padding: 8px;
+  width: 100%;
+}/*# sourceMappingURL=style.css.map */

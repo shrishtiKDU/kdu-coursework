@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>web socte</title>
+        
+  <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <section class="main-box">
+            <div class="header"> 
+                <p class="heading-text"> KDU CHAT APP </p>
+           </div>
+           <form id="chat-form">
+           <div class="chat-screen">
+            <div class="message">
+                <p class="user-pfp">U</p>
+                <p class="sent-text-box"> hello my first text message </p>
+            </div>
+            <div class="message">
+                <p class="my-pfp">Y</p>
+                <p class="sent-text-box"> hello another text from me</p>
+            </div>
+           </div>
+          <div class="submit-section">
+            <input type="text" id="textArea"/>
+            <button class="submit-btn" type="submit"><img src="./assets/arrow.svg" alt="submit" id="submit-btn-id"/></button>
+          </div>
+        </form>
+        </section>
+       
+
+
+
+        <script src="https://cdn.socket.io/4.7.4/socket.io.min.js" integrity="sha384-Gr6Lu2Ajx28mzwyVR8CFkULdCU7kMlZ9UthllibdOSo6qAiN+yXNHqtgdTvFXMT4" crossorigin="anonymous"></script>
+   <script> 
+    const socket = io("http://localhost:3000");
+
+    // message to server
+
+    /**
+ * Function to handle incoming chat messages from the server.
+ * This function appends the message to the chat screen and scrolls to the bottom.
+ * @param {string} message - The message received from the server.
+ */
+
+    socket.on('chatMessage', message =>{
+        OtherMessage(message);
+        chatMessages.scrollTop =chatMessages.scrollHeight;
+        e.target.elements.msg.value='';
+        e.target.elements.msg.focus();
+    })
+
+    /**
+ * Represents the chat screen element.
+ * @type {HTMLElement}
+ */
+   
+    const chatMessages = document.querySelector('.chat-screen');
+
+    /**
+ * Function to display user's own message on the chat screen.
+ * @param {string} message - The message to be displayed.
+ */
+    function MyMessage(message){
+        const div = document.createElement('div');
+        div.classList.add('message'); 
+        div.innerHTML =`
+        <div class="message">
+                <p class="my-pfp">Y</p>
+                <p class="sent-text-box"> ${message} </p>
+            </div>`;
+            document.querySelector('.chat-screen').appendChild(div);
+    }
+
+    
+    function OtherMessage(message){
+        const div = document.createElement('div');
+        div.classList.add('message'); 
+        div.innerHTML =`
+        <div class="message">
+                <p class="user-pfp">U</p>
+                <p class="sent-text-box"> ${message} </p>
+            </div>`;
+            document.querySelector('.chat-screen').appendChild(div);
+    }
+
+
+    const chatForm  = document.getElementById('chat-form');
+
+    chatForm.addEventListener('submit', e =>{
+        e.preventDefault();
+        const msg= e.target.elements.textArea.value;
+        e.target.elements.textArea.value="";
+        MyMessage(msg);
+        socket.emit('chatMessage', msg);
+    });
+
+
+   
+    </script> 
+    </body>
+</html>
