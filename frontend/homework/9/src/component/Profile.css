@@ -1,0 +1,18 @@
+.hobby-div {
+  background-color: rgb(148, 229, 162);
+}
+
+.skill-div {
+  background-color: rgb(138, 206, 243);
+}
+
+.section-div {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 7rem;
+}
+
+.main-dev {
+  background-color: rgb(232, 214, 140);
+  height: 100vh;
+}/*# sourceMappingURL=Profile.css.map */
