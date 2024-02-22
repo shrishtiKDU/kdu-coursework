@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Login pae</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@300&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="main">
+      <section class="left" id="dsk-nav">
+        <nav class="navigation-section-desktop">
+          <div class="logo">
+            <img src="./assets/myassets/logo.png" alt="logo" id="logo" />
+          </div>
+          <div class="nav-section">
+            <div>
+              <img src="./assets/myassets/house.png" alt="house" id="nav-img" />
+            </div>
+            <div><p class="nav-section-text" id="house">Home</p></div>
+          </div>
+          <div class="nav-section">
+            <div>
+              <img
+                src="./assets/myassets/search.png"
+                alt="house"
+                id="nav-img"
+              />
+            </div>
+            <div><p class="nav-section-text">Explore</p></div>
+          </div>
+          <div class="nav-section">
+            <div>
+              <img src="./assets/myassets/bell.png" alt="house" id="nav-img" />
+            </div>
+            <div><p class="nav-section-text">Notifications</p></div>
+          </div>
+          <div class="nav-section" id="message">
+            <div>
+              <img src="./assets/myassets/mail.png" alt="house" id="nav-img" />
+            </div>
+            <div><p class="nav-section-text">Messages</p></div>
+          </div>
+          <div class="nav-section">
+            <div>
+              <img src="./assets/myassets/slash.png" alt="house" id="nav-img" />
+            </div>
+            <div><p class="nav-section-text">Grok</p></div>
+          </div>
+          <div class="nav-section">
+            <div>
+              <img src="./assets/myassets/notes.png" alt="house" id="nav-img" />
+            </div>
+            <div><p class="nav-section-text">Lists</p></div>
+          </div>
+          <div class="nav-section">
+            <div>
+              <img
+                src="./assets/myassets/bookmark.png"
+                alt="house"
+                id="nav-img"
+              />
+            </div>
+            <div><p class="nav-section-text">Bookmarks</p></div>
+          </div>
+          <div class="nav-section">
+            <div>
+              <img
+                src="./assets/myassets/people.png"
+                alt="house"
+                id="nav-img"
+              />
+            </div>
+            <div><p class="nav-section-text">Communities</p></div>
+          </div>
+          <div class="nav-section">
+            <div>
+              <img src="./assets/myassets/logo.png" alt="house" id="nav-img" />
+            </div>
+            <div><p class="nav-section-text">Premium</p></div>
+          </div>
+          <div class="nav-section">
+            <div>
+              <img
+                src="./assets/myassets/person.png"
+                alt="house"
+                id="nav-img"
+              />
+            </div>
+            <div><p class="nav-section-text">Profile</p></div>
+          </div>
+          <div class="nav-section">
+            <div>
+              <img
+                src="./assets/myassets/moreoption.png"
+                alt="house"
+                id="nav-img"
+              />
+            </div>
+            <div><p class="nav-section-text">More</p></div>
+          </div>
+          <button type="button" id="post-button" onclick="postTweet()">
+            Post
+          </button>
+        </nav>
+        <div class="username-section">
+          <div class="uname-left">
+            <img
+              src="./assets/Profile/profile pic.png"
+              alt="bird"
+              class="profile-icon"
+            />
+            <div class="username-text">
+              <p class="name">Nitesh Gupta</p>
+              <p class="username">@Nit_hck</p>
+            </div>
+          </div>
+          <div class="name-right">
+            <p class="more">...</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- twitter feed desktop -->
+
+      <section class="tweet-box" id="dsk-body">
+        <div class="mid-second">
+          <div class="mid-img">
+            <img
+              src="./assets/Profile/profile pic.png"
+              alt="pfp"
+              class="profile-icon"
+            />
+          </div>
+          <form id="newPostForm">
+            <div class="text-area">
+              <input
+                type="text"
+                placeholder="What is happening?!"
+                class="post-input"
+                id="tweet-input"
+              />
+              <!-- <p class="who-can-reply">Everyone can reply</p> -->
+              <br />
+              <div class="post-nav">
+                <div>
+                  <img
+                    src="./assets/myassets/posticon.png"
+                    alt="post icon"
+                    id="post-nav-content"
+                  />
+                </div>
+                <div class="tweet-btn-div">
+                  <button class="tweet-btn">Post</button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="posts" id="posts">
+          <div class="tweet">
+            <div class="tweet-img">
+              <img
+                src="./assets/Profile/profile pic.png"
+                alt="pfp"
+                class="profile-icon"
+              />
+            </div>
+            <div class="tweet-desc">
+              <div class="tweet-head">
+                <div class="tweet-head-info">
+                  <p class="name">Nitesh Gupta</p>
+                  <p class="username" id="tweet-username">
+                    @Nit_hck <span id="dot"> . </span> 4h
+                  </p>
+                </div>
+                <p class="more-option">...</p>
+              </div>
+              <div class="tweet-body-main">
+                <p class="tweet-body">
+                  Coffee in hand, bugs beware. Time to crush some code.<span
+                    class="hashtag"
+                  >
+                    #DeveloperLife #Coding</span
+                  >
+                </p>
+                <div class="tweet-nav">
+                  <img
+                    src="./assets/myassets/comment.png"
+                    alt="comment"
+                    class="tweet-nav-icon"
+                  />
+                  <img
+                    src="./assets/myassets/retweet.png"
+                    alt="retweet"
+                    class="tweet-nav-icon"
+                    id="retweet-btn"
+                    onclick="changeRetweet(this)"
+                  />
+                  <img
+                    src="./assets/myassets/like.png"
+                    alt="like"
+                    class="tweet-nav-icon"
+                    id="post1-like clickbtn"
+                    onclick="changeLike(this)"
+                  />
+                  <img
+                    src="./assets/myassets/insights.png"
+                    alt="insights"
+                    class="tweet-nav-icon"
+                  />
+                  <div class="last-two-icon">
+                    <img
+                      src="./assets/myassets/bookmark-dark.png"
+                      alt="bookmark"
+                      class="tweet-nav-icon"
+                    />
+                    <img
+                      src="./assets/myassets/save.png"
+                      alt="save"
+                      class="tweet-nav-icon"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tweet">
+            <div class="tweet-img">
+              <img
+                src="./assets/Profile/profile pic.png"
+                alt="pfp"
+                class="profile-icon"
+              />
+            </div>
+            <div class="tweet-desc">
+              <div class="tweet-head">
+                <div class="tweet-head-info">
+                  <p class="name">Nitesh Gupta</p>
+                  <p class="username" id="tweet-username">
+                    @Nit_hck <span id="dot"> . </span> 4h
+                  </p>
+                </div>
+                <p class="more-option">...</p>
+              </div>
+              <div class="tweet-body-main">
+                <img
+                  src="./assets/myassets/img.png"
+                  alt="kdu"
+                  class="feed-img"
+                />
+                <div class="tweet-nav">
+                  <img
+                    src="./assets/myassets/comment.png"
+                    alt="comment"
+                    class="tweet-nav-icon"
+                  />
+                  <img
+                    src="./assets/myassets/retweet.png"
+                    alt="retweet"
+                    class="tweet-nav-icon"
+                  />
+                  <img
+                    src="./assets/myassets/like.png"
+                    alt="like"
+                    class="tweet-nav-icon"
+                  />
+                  <img
+                    src="./assets/myassets/insights.png"
+                    alt="insights"
+                    class="tweet-nav-icon"
+                  />
+                  <div class="last-two-icon">
+                    <img
+                      src="./assets/myassets/bookmark-dark.png"
+                      alt="bookmark"
+                      class="tweet-nav-icon"
+                    />
+                    <img
+                      src="./assets/myassets/save.png"
+                      alt="save"
+                      class="tweet-nav-icon"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tweet">
+            <div class="tweet-img">
+              <img
+                src="./assets/Profile/profile pic.png"
+                alt="pfp"
+                class="profile-icon"
+              />
+            </div>
+            <div class="tweet-desc">
+              <div class="tweet-head">
+                <div class="tweet-head-info">
+                  <p class="name">Nitesh Gupta</p>
+                  <p class="username" id="tweet-username">
+                    @Nit_hck <span id="dot"> . </span> 4h
+                  </p>
+                </div>
+                <p class="more-option">...</p>
+              </div>
+              <div class="tweet-body-main">
+                <video
+                  width="300"
+                  height="150"
+                  controls
+                  style="padding-bottom: 4px"
+                >
+                  <source src="movie.mp4" type="video/mp4" />
+                  <source src="movie.ogg" type="video/ogg" />
+                </video>
+
+                <div class="tweet-nav">
+                  <img
+                    src="./assets/myassets/comment.png"
+                    alt="comment"
+                    class="tweet-nav-icon"
+                  />
+                  <img
+                    src="./assets/myassets/retweet.png"
+                    alt="retweet"
+                    class="tweet-nav-icon"
+                  />
+                  <img
+                    src="./assets/myassets/like.png"
+                    alt="like"
+                    class="tweet-nav-icon"
+                  />
+                  <img
+                    src="./assets/myassets/insights.png"
+                    alt="insights"
+                    class="tweet-nav-icon"
+                  />
+                  <div class="last-two-icon">
+                    <img
+                      src="./assets/myassets/bookmark-dark.png"
+                      alt="bookmark"
+                      class="tweet-nav-icon"
+                    />
+                    <img
+                      src="./assets/myassets/save.png"
+                      alt="save"
+                      class="tweet-nav-icon"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- mobile navbar  -->
+
+      <nav class="navigation-section-mobile" id="mobile-nav">
+        <div class="mb-logo">
+          <div class="mb-username-section">
+            <div class="mb-uname-left">
+              <img
+                src="./assets/Profile/profile pic.png"
+                alt="bird"
+                class="profile-icon profile-icon-button"
+                id="mb-nav-pfp"
+                onclick="navToggleSections()"
+              />
+              <div class="mb-username-text">
+                <p class="name">Nitesh Gupta</p>
+                <p class="username" id="username_id">@Nit_hck</p>
+                <div class="numbers">
+                  <p class="following">
+                    1 <span id="span-follow">Following</span>
+                  </p>
+                  <p class="follower">
+                    0 <span id="span-follow"> Follower</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="name-right">
+              <img src="./assets/myassets/plus.png" alt="plus" id="plus" />
+            </div>
+          </div>
+        </div>
+
+        <div class="nav-section">
+          <div>
+            <img src="./assets/myassets/person.png" alt="house" id="nav-img" />
+          </div>
+          <div><p class="nav-section-text">Profile</p></div>
+        </div>
+        <div class="nav-section">
+          <div>
+            <img src="./assets/myassets/logo.png" alt="house" id="nav-img" />
+          </div>
+          <div><p class="nav-section-text">Premium</p></div>
+        </div>
+        <div class="nav-section">
+          <div>
+            <img src="./assets/myassets/notes.png" alt="house" id="nav-img" />
+          </div>
+          <div><p class="nav-section-text">Lists</p></div>
+        </div>
+        <div class="nav-section">
+          <div class="bookmark-class">
+            <img
+              src="./assets/myassets/bookmark.png"
+              alt="house"
+              id="nav-img"
+              class="bookmark"
+            />
+          </div>
+          <div><p class="nav-section-text">Bookmarks</p></div>
+        </div>
+        <div class="nav-section">
+          <div>
+            <img src="./assets/myassets/people.png" alt="house" id="nav-img" />
+          </div>
+          <div><p class="nav-section-text">Communities</p></div>
+        </div>
+
+        <div class="nav-section">
+          <div>
+            <img src="./assets/myassets/money.png" alt="house" id="nav-img" />
+          </div>
+          <div><p class="nav-section-text">Monetization</p></div>
+        </div>
+        <div class="nav-section">
+          <div>
+            <img src="./assets/myassets/ads.png" alt="house" id="nav-img" />
+          </div>
+          <div><p class="nav-section-text">Ads</p></div>
+        </div>
+        <div class="nav-section">
+          <div>
+            <img src="./assets/myassets/setting.png" alt="house" id="nav-img" />
+          </div>
+          <div><p class="nav-section-text">Settings and privacy</p></div>
+        </div>
+        <div class="nav-section">
+          <div>
+            <img src="./assets/myassets/logout.png" alt="house" id="nav-img" />
+          </div>
+          <div><p class="nav-section-text">Log out</p></div>
+        </div>
+      </nav>
+
+      <!--  tweet box mobile -->
+
+      <section class="tweet-box" id="mb-body">
+        <div class="mb-head">
+          <img
+            src="./assets/Profile/profile pic.png"
+            alt="bird"
+            class="profile-icon"
+            id="profile-hover"
+            onclick="bodyToggleSections()"
+          />
+          <img src="./assets/myassets/logo.png" alt="logo" id="logo" />
+          <img src="./assets/myassets/setting.png" alt="setting" id="setting" />
+        </div>
+        <div class="mb-head-1">
+          <div class="mb-arrow-div">
+            <img src="./assets/myassets/arrow.png" alt="arrow" id="arrow" />
+          </div>
+          <div class="arrow-div">
+            <div class="draft-div">
+              <p class="draft-text">Drafts</p>
+            </div>
+            <button id="mb-tweet-btn" onclick="postTweet()">Post</button>
+          </div>
+        </div>
+
+        <div class="mid-second">
+          <div class="mid-img">
+            <img
+              src="./assets/Profile/profile pic.png"
+              alt="pfp"
+              class="profile-icon"
+            />
+          </div>
+          <div class="text-area">
+            <input
+              type="text"
+              placeholder="What is happening?!"
+              class="post-input"
+            />
+            <!-- <p class="who-can-reply">Everyone can reply</p> -->
+
+            <div class="everyone-div">
+              <img
+                src="./assets/myassets/everyone.png"
+                alt="everyone can see"
+                id="everyone-img"
+              />
+            </div>
+            <div class="post-nav">
+              <div>
+                <img
+                  src="./assets/myassets/posticon.png"
+                  alt="post icon"
+                  id="post-nav-content"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="posts">
+          <div class="text-container"></div>
+
+          <!-- tweet -->
+          <div class="tweet">
+            <div class="tweet-img">
+              <img
+                src="./assets/Profile/profile pic.png"
+                alt="pfp"
+                class="profile-icon"
+              />
+            </div>
+            <div class="tweet-desc">
+              <div class="tweet-head">
+                <div class="tweet-head-info">
+                  <p class="name">Nitesh Gupta</p>
+                  <p class="username" id="tweet-username">
+                    @nit_hck <span id="dot"> . </span> 34s
+                  </p>
+                </div>
+                <p class="more-option">...</p>
+              </div>
+              <div class="tweet-body-main">
+                <p class="tweet-body">
+                  Coffee in hand, bugs beware. Time to crush some code.<span
+                    class="hashtag"
+                  >
+                    #DeveloperLife #Coding</span
+                  >
+                </p>
+                <div class="tweet-nav">
+                  <img
+                    src="./assets/myassets/comment.png"
+                    alt="comment"
+                    class="tweet-nav-icon"
+                  />
+                  <img
+                    src="./assets/myassets/retweet.png"
+                    alt="retweet"
+                    class="tweet-nav-icon"
+                  />
+                  <img
+                    src="./assets/myassets/like.png"
+                    alt="like"
+                    class="tweet-nav-icon"
+                  />
+                  <img
+                    src="./assets/myassets/insights.png"
+                    alt="insights"
+                    class="tweet-nav-icon"
+                  />
+                  <div class="last-two-icon">
+                    <img
+                      src="./assets/myassets/bookmark-dark.png"
+                      alt="bookmark"
+                      class="tweet-nav-icon"
+                    />
+                    <img
+                      src="./assets/myassets/save.png"
+                      alt="save"
+                      class="tweet-nav-icon"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tweet">
+            <div class="tweet-img">
+              <img
+                src="./assets/Profile/profile pic.png"
+                alt="pfp"
+                class="profile-icon"
+              />
+            </div>
+            <div class="tweet-desc">
+              <div class="tweet-head">
+                <div class="tweet-head-info">
+                  <p class="name">Nitesh Gupta</p>
+                  <p class="username" id="tweet-username">
+                    @Nit_hck <span id="dot"> . </span> 4h
+                  </p>
+                </div>
+                <p class="more-option">...</p>
+              </div>
+              <div class="tweet-body-main">
+                <img
+                  src="./assets/myassets/img.png"
+                  alt="kdu"
+                  class="feed-img"
+                />
+                <div class="tweet-nav">
+                  <img
+                    src="./assets/myassets/comment.png"
+                    alt="comment"
+                    class="tweet-nav-icon"
+                  />
+                  <img
+                    src="./assets/myassets/retweet.png"
+                    alt="retweet"
+                    class="tweet-nav-icon"
+                  />
+                  <img
+                    src="./assets/myassets/like.png"
+                    alt="like"
+                    class="tweet-nav-icon"
+                  />
+                  <img
+                    src="./assets/myassets/insights.png"
+                    alt="insights"
+                    class="tweet-nav-icon"
+                  />
+                  <div class="last-two-icon">
+                    <img
+                      src="./assets/myassets/bookmark-dark.png"
+                      alt="bookmark"
+                      class="tweet-nav-icon"
+                    />
+                    <img
+                      src="./assets/myassets/save.png"
+                      alt="save"
+                      class="tweet-nav-icon"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tweet">
+            <div class="tweet-img">
+              <img
+                src="./assets/Profile/profile pic.png"
+                alt="pfp"
+                class="profile-icon"
+              />
+            </div>
+            <div class="tweet-desc">
+              <div class="tweet-head">
+                <div class="tweet-head-info">
+                  <p class="name">Nitesh Gupta</p>
+                  <p class="username" id="tweet-username">
+                    @Nit_hck <span id="dot"> . </span> 4h
+                  </p>
+                </div>
+                <p class="more-option">...</p>
+              </div>
+              <div class="tweet-body-main">
+                <video
+                  width="300"
+                  height="150"
+                  controls
+                  style="padding-bottom: 4px"
+                >
+                  <source src="movie.mp4" type="video/mp4" />
+                  <source src="movie.ogg" type="video/ogg" />
+                </video>
+
+                <div class="tweet-nav">
+                  <img
+                    src="./assets/myassets/comment.png"
+                    alt="comment"
+                    class="tweet-nav-icon"
+                  />
+                  <img
+                    src="./assets/myassets/retweet.png"
+                    alt="retweet"
+                    class="tweet-nav-icon"
+                  />
+                  <img
+                    src="./assets/myassets/like.png"
+                    alt="like"
+                    class="tweet-nav-icon"
+                  />
+                  <img
+                    src="./assets/myassets/insights.png"
+                    alt="insights"
+                    class="tweet-nav-icon"
+                  />
+                  <div class="last-two-icon">
+                    <img
+                      src="./assets/myassets/bookmark-dark.png"
+                      alt="bookmark"
+                      class="tweet-nav-icon"
+                    />
+                    <img
+                      src="./assets/myassets/save.png"
+                      alt="save"
+                      class="tweet-nav-icon"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="chat-desktop" id="chat-sec-desktop">
+        <div class="chat-main">
+          <div class="message-left">
+            <div class="messages">
+              <p class="message-txt">Messages</p>
+            </div>
+
+            <div class="message-userList" id="message-list">
+              <button class="message-user">
+                <img
+                  src="./assets/Profile/profile pic.png"
+                  alt="pfp"
+                  class="profile-icon"
+                />
+                <p class="name" id="message-name">Sagun Sangwan</p>
+                <p class="username" id="message-username">@Sagunn</p>
+              </button>
+            </div>
+          </div>
+          <div class="main-chat">
+            <div class="chat-box">
+              <div class="chat-head">
+                <p class="chatbox-user">Sagun Sangwan</p>
+              </div>
+              <div class="message-list">
+                <p class="text-msg message-sent">text</p>
+
+                <div class="input-msg-div">
+                  <input
+                    type="text"
+                    class="input-msg"
+                    placeholder="enter text here "
+                  />
+                  <button class="sent-btn">
+                    <img src="./assets/myassets/sent.png" class="sent-arrow" />
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <script src="./server/service/post.js"></script>
+
+    <script>
+      function bodyToggleSections() {
+        var mbbody = document.querySelector("#mb-body");
+        var mbHead2 = document.querySelector("#mobile-nav");
+
+        mbbody.style.display = "none";
+        mbHead2.style.display = "block";
+      }
+      function navToggleSections() {
+        var mbbody = document.querySelector("#mb-body");
+        var mbHead2 = document.querySelector("#mobile-nav");
+
+        mbbody.style.display = "block";
+        mbHead2.style.display = "none";
+      }
+
+      function changeLike(imgElement) {
+        // Get the current source of the image
+        var currentSrc = imgElement.src;
+
+        // Get the file name from the current source
+        var fileName = currentSrc.substring(currentSrc.lastIndexOf("/") + 1);
+
+        // Check if the current image is the like image
+        if (fileName === "like.png") {
+          // Change the source to the new image
+          imgElement.src = "./assets/myassets/pinkheart.png";
+          imgElement.style.width = "30px";
+        } else {
+          // Change the source back to the original image
+          imgElement.src = "./assets/myassets/like.png";
+        }
+      }
+      function changeRetweet(imgElement) {
+        // Get the current source of the image
+        var currentSrc = imgElement.src;
+
+        // Get the file name from the current source
+        var fileName = currentSrc.substring(currentSrc.lastIndexOf("/") + 1);
+
+        // Check if the current image is the like image
+        if (fileName === "retweet.png") {
+          // Change the source to the new image
+          imgElement.src = "./assets/myassets/reretweet.png";
+          imgElement.style.width = "30px";
+        } else {
+          // Change the source back to the original image
+          imgElement.src = "./assets/myassets/retweet.png";
+        }
+      }
+
+      // get apui
+
+      const messageBtn = document.getElementById("message");
+      const messageSection = document.getElementById("chat-sec-desktop");
+      messageBtn.addEventListener("click", function () {
+        const feedSection = document.getElementById("dsk-body");
+        hideSection(feedSection);
+        showSection(messageSection);
+      });
+
+      function hideSection(section) {
+        if (section) {
+          section.style.display = "none";
+        }
+      }
+
+      // Function to show a section
+      function showSection(section) {
+        if (section) {
+          section.style.display = "block";
+        }
+      }
+    </script>
+    <script
+      src="https://cdn.socket.io/4.7.4/socket.io.min.js"
+      integrity="sha384-Gr6Lu2Ajx28mzwyVR8CFkULdCU7kMlZ9UthllibdOSo6qAiN+yXNHqtgdTvFXMT4"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./server/service/messsage.js"></script>
+  </body>
+</html>
