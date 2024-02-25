@@ -1,0 +1,46 @@
+.main-nav{
+    background-color: rgb(42,42,114);
+    display: flex;
+    justify-content: space-between;
+}
+
+.search{
+    margin-top: 2px;
+    background-color: white;
+
+}
+.input{
+    height: 30px;
+    width:24rem;
+}
+.search-div{
+    display: flex;
+    padding: 12px;
+   
+}
+.filter-search-div{
+    padding:12px;
+    width: 35%;
+    display: flex;
+    justify-content: space-between;
+}
+.filter-div{
+    display: flex;
+    justify-content: space-between;
+}
+.product-div{
+    display: flex;
+    justify-content: space-between;
+}
+.txt{
+    color: white;
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-right: 8px;
+    margin-top: 8px;
+}
+
+.opt{
+    width: 12rem;
+    height: 2rem;
+}

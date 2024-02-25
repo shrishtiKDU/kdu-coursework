@@ -1,0 +1,26 @@
+.home-div{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-left: 32px;
+    margin-right: 32px;
+}
+.main-div{
+    display: flex;
+}
+
+.title{
+    font-weight: bold;
+    font-size: 3.5rem;
+}
+
+.title-div{
+    color: rgb(41,42,110);
+    padding: 4rem;
+    display: flex;
+    justify-content: center;
+}
+
+.home{
+    background-color: rgb(243,243,243);
+}
