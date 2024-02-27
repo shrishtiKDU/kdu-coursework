@@ -1,0 +1,44 @@
+.todo-heading {
+  font-size: 2rem;
+  color: black;
+  padding-left: 48px;
+}
+
+.parent {
+  border: 2px solid rgb(225, 224, 224);
+  margin-left: 24rem;
+  margin-right: 24rem;
+  margin-top: 3rem;
+}
+.search-div {
+  padding-left: 48px;
+}
+.parent-div {
+  display: flex;
+  justify-content: start;
+  margin-left: 115px;
+  border: 1px;
+}
+
+.todo-list {
+  margin-top: 20px;
+  width: 50rem;
+  display: flex;
+  flex-flow: column;
+  justify-content: start;
+  align-items: start;
+}
+
+#add-input {
+  width: 20rem;
+  padding: 10px;
+}
+#submit-btn {
+  background-color: black;
+  color: white;
+  padding: 10px;
+}
+.items {
+  font-size: 32px;
+  padding-left: 48px;
+}
