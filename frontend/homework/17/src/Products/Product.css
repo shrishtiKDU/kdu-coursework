@@ -1,0 +1,78 @@
+.main{
+    background-color:rgb(243,243,243) ;
+    height: 100vh;
+}
+.content-div{
+    display: flex;
+    justify-content: space-between;
+}
+.prod-title{
+    display: flex;
+    justify-content: center;
+    font-size: 3rem;
+    font-weight: bold;
+    color:rgb(41,42,110);
+    padding-top:4rem ;
+}
+.img{
+    height: 25rem;
+    width:  25rem;
+    margin-left: 12rem;
+    
+}
+
+.model{
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.category{
+    color: rgb(57, 57, 57);
+    font-size: 1.4rem;
+    margin-bottom: 0.3rem;
+   
+}
+.price{
+    color:rgb(41,42,110);
+    font-weight: bold;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.desc-title{
+    font-weight:bolder;
+    margin-bottom: 0.3rem;
+}
+.description{
+    color: rgb(100, 100, 100);
+    display: flex;
+    flex-wrap: wrap;
+    width: 60%;
+    font-size: 1.3rem;
+}
+
+.btn{
+    text-decoration: none;
+    color: rgb(75, 145, 183);
+    padding: 3px;
+    font-weight: bold;
+    border-radius: 6px;
+    font-size: 1.2rem;
+}
+
+.back-btn{
+    border: 1px solid gray;
+    width: fit-content;
+    padding: 4px;
+    border-radius: 3px;
+}
+.desc-title{
+    font-weight: 1.4px;
+    font-size: 1.1rem;
+}
+
+.content-div{
+    margin-top:4rem;
+    
+}
