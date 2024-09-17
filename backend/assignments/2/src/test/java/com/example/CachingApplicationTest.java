@@ -1,10 +1,10 @@
-package com.kdu.caching;
+package com.example;
 
+import com.example.demo.DemoApplication;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.TestPropertySource;
 
-@SpringBootTest
+@SpringBootTest(classes = DemoApplication.class)
 class CachingApplicationTest {
 
     @Test
