@@ -1,0 +1,52 @@
+body {
+  background-color: black;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  height: 800px;
+}
+
+.login-txt {
+  color: white;
+  font-size: 3.4rem;
+}
+
+#logo-img {
+  height: 2.6rem;
+  width: 2.8rem;
+}
+
+#username {
+  margin-top: -12px;
+  background-color: black;
+  border: 1.5px solid rgb(75, 155, 235);
+  border-radius: 4px;
+  padding: 18px;
+  color: white;
+  width: 15rem;
+  font-size: 1rem;
+}
+
+#password {
+  background-color: black;
+  border: 1.5px solid rgb(75, 155, 235);
+  border-radius: 4px;
+  padding: 18px;
+  width: 15rem;
+  color: white;
+  font-size: 1rem;
+}
+
+.password-div {
+  margin-top: 20px;
+}
+
+#submit-btn {
+  background-color: rgb(75, 155, 235);
+  color: white;
+  width: 18rem;
+  padding: 12px;
+  border-radius: 20px;
+  margin-top: 20px;
+}/*# sourceMappingURL=login.css.map */

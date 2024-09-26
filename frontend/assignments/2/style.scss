@@ -1,0 +1,602 @@
+body {
+  background-color: black;
+  font-family: "Work Sans", sans-serif;
+}
+.left {
+  width: 258px;
+  background-color: rgb(0, 0, 0);
+  margin-left: 120px;
+}
+.main {
+  display: flex;
+}
+
+.nav-section {
+  display: flex;
+  margin-bottom: -15px;
+}
+.nav-section-text {
+  color: white;
+  font-size: 1.5rem;
+  margin-left: 14px;
+  font-weight: 520;
+}
+
+.username-text {
+  line-height: 23%;
+  padding-left: 10px;
+  font-size: medium;
+}
+#house {
+  padding-top: 4px;
+}
+#nav-img {
+  margin-top: 20px;
+}
+#post-button {
+  width: 100%;
+  height: 62px;
+  border-radius: 32px;
+  color: white;
+  margin-top: 10px;
+  background-color: rgb(29, 155, 240);
+  font-weight: bolder;
+  font-size: 1.3rem;
+  border: 1px solid rgb(29, 155, 240);
+}
+.profile-icon {
+  height: 44px;
+  width: 44px;
+  border-radius: 28px;
+  padding-top: 4px;
+}
+.name {
+  color: white;
+  font-weight: bold;
+}
+.username {
+  color: grey;
+}
+.more {
+  color: white;
+  font-size: larger;
+  font-weight: 900;
+}
+.username-section {
+  display: flex;
+  flex-direction: row;
+  margin-top: 60px;
+  align-items: end;
+  justify-content: space-between;
+  padding-top: 30px;
+}
+
+.uname-left {
+  display: flex;
+  justify-content: start;
+}
+
+.tweet-box {
+  width: 612px;
+  border-left: 1px solid rgb(70, 70, 70);
+}
+
+.post-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: top;
+  padding-top: 14px;
+}
+#post-nav-content {
+  height: 32px;
+}
+.mid-top {
+  display: flex;
+  justify-content: space-around;
+  border-bottom: 1px solid gray;
+  height: 40px;
+}
+.mid-second {
+  display: flex;
+  padding-top: 18px;
+  padding-left: 13px;
+  border-bottom: 1px solid gray;
+}
+.post-input {
+  text-decoration: none;
+  border: 1px solid black;
+  padding-top: 10px;
+  background-color: black;
+  font-size: x-large;
+  margin-bottom: 25px;
+  color: white;
+}
+
+.text-area {
+  padding-left: 14px;
+  width: 100%;
+}
+
+.tweet-btn {
+  border: 1px solid rgb(29, 155, 240);
+  border-radius: 32px;
+  width: 82px;
+  height: 42px;
+  color: white;
+  padding-top: 3px;
+  background-color: rgb(29, 155, 240);
+  font-weight: bolder;
+  font-size: 1.1rem;
+}
+
+.tweet-btn-div {
+  margin-bottom: 10px;
+}
+
+.tweet {
+  display: flex;
+  padding-top: 10px;
+  padding-left: 13px;
+}
+
+.tweet-desc {
+  width: 100%;
+}
+
+.tweet-body-main {
+  padding-left: 14px;
+}
+
+.tweet-head {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 14px;
+}
+
+.tweet-head-info {
+  display: flex;
+  justify-content: start;
+  margin-top: -7px;
+}
+
+.more-option {
+  color: rgb(97, 103, 99);
+  font-size: 1.4rem;
+  font-weight: bolder;
+  margin-top: -1px;
+}
+
+.tweet-body {
+  color: white;
+  margin-top: -14px;
+  font-size: medium;
+  line-height: 1.4rem;
+}
+
+#tweet-username {
+  padding-left: 6px;
+}
+.hashtag {
+  color: rgb(25, 136, 211);
+}
+
+.tweet-nav {
+  display: flex;
+  justify-content: space-between;
+  margin-top: -12px;
+}
+
+#dot {
+  margin-bottom: 4rem;
+}
+
+.tweet-nav-icon {
+  width: 1.5rem;
+  height: 1.6rem;
+}
+
+.last-two-icon img {
+  padding-left: 2px;
+}
+.feed-img {
+  height: 10rem;
+  width: 30rem;
+  padding-bottom: 16px;
+}
+
+.numbers {
+  display: flex;
+  justify-content: start;
+  margin-top: -10px;
+}
+
+.following {
+  color: white;
+}
+.follower {
+  padding-left: 20px;
+  color: white;
+}
+#span-follow {
+  color: gray;
+}
+
+#username_id {
+  margin-top: -10px;
+}
+.mb-username-section {
+  display: flex;
+  justify-content: space-between;
+}
+#plus {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+#mobile-nav {
+  display: none;
+}
+
+#mb-body {
+  display: none;
+}
+.bookmark {
+  margin-top: 56px;
+  margin-left: 5px;
+}
+
+// ------------------- chat csss ------------------------
+#chat-sec-desktop {
+  display: none;
+  width: 100%;
+  border-left: 1px solid gray;
+  border-right: 1px solid gray;
+}
+.chat-main {
+  display: flex;
+}
+.message-left {
+  width: 40%;
+}
+.message-txt {
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding-left: 24px;
+}
+.message-user {
+  display: flex;
+  background-color: rgb(41, 40, 40);
+  padding-left: 24px;
+}
+#message-name {
+  padding-left: 12px;
+}
+#message-username {
+  padding-left: 12px;
+}
+.chat-box {
+  border-left: 1px solid gray;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+  padding-left: 24px;
+}
+
+.chatbox-user {
+  width: 80vh;
+}
+
+.chatbox-user {
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  border-bottom: 1px solid gray;
+  padding-bottom: 2rem;
+  padding-left: 12px;
+}
+.chat-desktop {
+  height: 100vh;
+}
+.message-list {
+  margin-bottom: 32px;
+}
+
+.chat-main {
+  height: 100%;
+}
+.main-chat {
+  height: 100%;
+}
+
+@media screen and (max-width: 414px) and (min-width: 320px) {
+  .name-right {
+    margin-left: -12px;
+  }
+
+  #dsk-nav {
+    display: none;
+  }
+  #dsk-body {
+    display: none;
+  }
+
+  #mobile-nav {
+    width: 79%;
+    display: none;
+  }
+  .nav-section {
+    margin-top: -22px;
+  }
+
+  .bookmark {
+    padding-top: 2.5px;
+    padding-left: 4px;
+  }
+
+  .mb-logo {
+    margin-bottom: 6px;
+    margin-left: 10px;
+  }
+  .feed-img {
+    height: 10rem;
+    width: 100%;
+    padding-bottom: 16px;
+  }
+  .mb-head {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid gray;
+    padding-bottom: 4px;
+  }
+
+  #mb-body {
+    width: 100%;
+    display: block;
+  }
+  .mb-head-1 {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 12px;
+    padding-left: 16px;
+  }
+  .arrow-div {
+    display: flex;
+    justify-content: space-around;
+  }
+  .draft-text {
+    color: rgb(29, 155, 240);
+    font-weight: bold;
+    padding-right: 26px;
+    font-size: 0.9rem;
+  }
+  .draft-div {
+    display: flex;
+    align-items: start;
+
+    margin-top: -0.5rem;
+  }
+
+  #arrow {
+    width: 100%;
+  }
+
+  #mb-tweet-btn {
+    border: 1px solid rgb(29, 155, 240);
+    border-radius: 32px;
+    width: 60px;
+    padding-top: 3px;
+    height: 31px;
+    color: white;
+    background-color: rgb(29, 155, 240);
+    font-weight: bolder;
+    font-size: 0.9rem;
+  }
+
+  .mid-second {
+    padding-left: 18px;
+    margin-top: -6px;
+    margin-bottom: 32px;
+  }
+
+  .profile-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  }
+  .post-input {
+    font-size: larger;
+    margin-left: -1px;
+  }
+  .everyone-div {
+    margin-top: 57px;
+    border-bottom: 0.1px solid rgb(61, 61, 61);
+    padding-bottom: 8px;
+    margin-left: -50px;
+  }
+
+  #post-nav-content {
+    width: 190px;
+    height: 29px;
+    margin-bottom: 20px;
+    margin-left: -50px;
+  }
+  // .name{
+
+  .tweet-box {
+    width: 100%;
+    border: none;
+  }
+  .feed-img {
+    width: 100%;
+  }
+
+  .nav-section-text {
+    font-size: 1.32rem;
+    font-weight: bold;
+    margin-top: 33px;
+    padding-left: 6.5px;
+  }
+  #nav-img {
+    padding-top: 8px;
+  }
+}
+
+// ,essage
+
+* {
+  box-sizing: border-box;
+  color: rgb(231, 233, 234);
+  font-size: 15px;
+}
+
+.chat-desktop {
+  margin-left: 120px;
+}
+
+.chat-button {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background-color: black;
+  border: 1px solid rgba(73, 73, 73, 0.829);
+  width: 100%;
+  margin-top: -0.5px;
+}
+
+.chat-button:hover {
+  background-color: rgba(20, 20, 20, 0.753);
+}
+
+.pfp {
+  height: 40px;
+  border-radius: 9999px;
+}
+
+.chat-title {
+  width: 100%;
+  border-bottom: 1px solid rgba(73, 73, 73, 0.829);
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  color: rgb(231, 233, 234);
+  font-size: 20px;
+}
+
+.message-area {
+  flex-grow: 1;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+}
+
+.inner-box {
+  background-color: #202327;
+  width: 100%;
+  display: flex;
+  padding: 10px;
+  border-radius: 15px;
+}
+
+.input {
+  background-color: #202327;
+  border: none;
+  width: 100%;
+}
+
+.send-button {
+  height: 15px;
+  display: flex;
+  padding: 12px;
+  align-items: center;
+  background-color: transparent;
+  border: none;
+}
+
+.send-svg {
+  cursor: pointer;
+  font-weight: 700;
+  line-height: 20px;
+  height: 2rem;
+  width: 2rem;
+  display: block;
+  fill: rgb(0, 170, 255);
+  padding: 5px;
+}
+
+.chat {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.message-sent {
+  background-color: #007bff;
+  padding: 8px 12px;
+  border-radius: 10px;
+  color: rgb(183, 230, 255);
+  padding-bottom: 12px;
+  margin-bottom: 5px;
+  font-size: 1.2rem;
+  width: 50%;
+  align-self: flex-end;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  border-top-left-radius: 9999px;
+  border-bottom-right-radius: 9999px;
+  border-top-right-radius: 9999px;
+}
+
+.message-recieved {
+  background-color: #2f3336;
+  padding: 8px 12px;
+  border-radius: 10px;
+  padding-bottom: 12px;
+  margin-bottom: 5px;
+  width: 50%;
+  align-self: flex-start;
+  border-top-left-radius: 9999px;
+  border-bottom-right-radius: 9999px;
+  border-top-right-radius: 9999px;
+}
+
+.message-user {
+  width: 100%;
+  margin-top: 12px;
+  padding: 4px;
+}
+
+#msg-name {
+  margin-right: 12px;
+  margin-left: 12px;
+}
+
+.input-msg {
+  background-color: #2f3336;
+  color: #868686;
+  width: 100%;
+  padding: 12px;
+  border-radius: 999px;
+  text-decoration: none;
+}
+
+.input-msg-div {
+  position: relative;
+}
+
+.sent-arrow {
+  text-decoration: none;
+  border-radius: 999px;
+}
+.sent-btn {
+  position: absolute;
+  top: 6px;
+  right: 12px;
+  border: 2px solid #1d1e1f;
+  background-color: #1d1e1f;
+  border-radius: 999px;
+}
